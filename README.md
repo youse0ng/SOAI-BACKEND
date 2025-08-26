@@ -30,7 +30,7 @@ Spring Boot 기반 **의료 소아 복부 X-Ray 분석 및 챗봇 시스템**입
 ### 📋 DashBoard
 <img width="936" height="751" alt="Dashboard UI" src="https://github.com/user-attachments/assets/44c0bf4e-621a-42b3-ad16-88006c9ef7b5" />
 
-### 🩻 Segmentation
+### 🔬 Segmentation
 <img width="1049" height="777" alt="Segmentation UI" src="https://github.com/user-attachments/assets/56edcba7-2209-4ca2-99a6-34d861db03b4" />
 
 ---
