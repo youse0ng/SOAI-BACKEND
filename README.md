@@ -46,20 +46,35 @@ Spring Boot 기반 **의료 소아 복부 X-Ray 분석 및 챗봇 시스템**입
 
 ## 📌 프로젝트 구조
 soai-springboot/
+
 ┣ 📂 src
+
 ┃ ┣ 📂 main/java/com/team1/soai
+
 ┃ ┃ ┣ 📂 controller
+
 ┃ ┃ ┣ 📂 service
+
 ┃ ┃ ┣ 📂 dto
+
 ┃ ┃ ┣ 📂 mapper
+
 ┃ ┃ ┗ 📂 config
+
 ┃ ┣ 📂 resources
+
 ┃ ┃ ┣ 📂 mapper
+
 ┃ ┃ ┗ application.properties
+
 ┃ ┣ 📂 webapp
+
 ┃ ┃ ┣ 📂 WEB-INF
+
 ┃ ┃ ┃ ┣ 📂 jsp
+
 ┣ 📂 docs
+
 ┗ README.md
 
 Team SOAI. 황유성
