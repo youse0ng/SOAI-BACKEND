@@ -10,7 +10,7 @@ Spring Boot 기반 **의료 소아 복부 X-Ray 분석 및 챗봇 시스템**입
 - 📜 **View History** : 환자별 진단/대화 기록 조회
 - 🔎 **Patient Search** : 이름·생년월일 기반 환자 검색
 - 📊 **Dashboard** : 환자 Study / Series / Instance 관리 및 DICOM 뷰어
-- 🩻 **Segmentation** : AI 모델을 활용한 의료 영상 분할
+- 🔬 **Segmentation** : AI 모델을 활용한 의료 영상 분할
 
 ---
 
