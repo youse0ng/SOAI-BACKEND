@@ -1,4 +1,4 @@
-# 🏥 SOAI Spring Boot Project ProtoType
+<img width="1059" height="845" alt="image" src="https://github.com/user-attachments/assets/44826bd4-542c-4a9d-80c2-b5b461de4a8e" /># 🏥 SOAI Spring Boot Project ProtoType
 
 Spring Boot 기반 **의료 소아 복부 X-Ray 분석 및 챗봇 시스템**입니다.  
 환자 검색, X-ray 대시보드, Segmentation, Chat-Bot 기능을 제공합니다.
@@ -16,22 +16,26 @@ Spring Boot 기반 **의료 소아 복부 X-Ray 분석 및 챗봇 시스템**입
 
 ## 💬 Chat-Bot 화면
 ### Chat-Bot
-<img width="610" height="741" alt="Chat-Bot UI" src="https://github.com/user-attachments/assets/f96aba72-f14f-4ed2-b600-d385c6984a19" />
+<img width="655" height="773" alt="image" src="https://github.com/user-attachments/assets/cc6701ad-aeaa-45d5-a396-28acce887a62" />
+
 
 ### View History
-<img width="810" height="737" alt="History UI" src="https://github.com/user-attachments/assets/a34c9cf3-8070-4472-952a-79569c2dd884" />
+<img width="903" height="735" alt="image" src="https://github.com/user-attachments/assets/dcc1f825-e9ba-434e-aa36-281771ae2a24" />
 
 ---
 
 ## 📊 대시보드 화면
 ### 🔍 Search Patient
-<img width="854" height="133" alt="Search Patient UI" src="https://github.com/user-attachments/assets/e9d03c97-508f-4774-ae7d-4c460a2af0ce" />
+<img width="1277" height="411" alt="image" src="https://github.com/user-attachments/assets/b0f9f901-e3dd-4e24-9652-d53a61e32f12" />
 
 ### 📋 DashBoard
-<img width="936" height="751" alt="Dashboard UI" src="https://github.com/user-attachments/assets/44c0bf4e-621a-42b3-ad16-88006c9ef7b5" />
+<img width="1117" height="901" alt="image" src="https://github.com/user-attachments/assets/b78baaf9-6fd8-4c30-ab76-12d9b1575bfd" />
 
 ### 🔬 Segmentation
-<img width="1049" height="777" alt="Segmentation UI" src="https://github.com/user-attachments/assets/56edcba7-2209-4ca2-99a6-34d861db03b4" />
+<img width="1059" height="845" alt="image" src="https://github.com/user-attachments/assets/05cc981e-34d8-4692-8235-eefcab37d217" />
+
+### 📝 Image-meta Multi Modal Model
+<img width="1152" height="900" alt="image" src="https://github.com/user-attachments/assets/174b10fc-51cc-4a8a-9385-e90df7446579" />
 
 ---
 
