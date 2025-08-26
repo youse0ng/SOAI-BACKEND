@@ -1,7 +1,7 @@
 # 🏥 SOAI Spring Boot Project ProtoType
 
 Spring Boot 기반 **의료 소아 복부 X-Ray 분석 및 챗봇 시스템**입니다.  
-환자 검색, X-ray 대시보드, Segmentation, Chat-Bot 기능을 제공합니다.
+환자 검색, X-ray 대시보드, Segmentation, Chat-Bot, Image-Meta AI Model 기능을 제공합니다.
 
 ---
 
