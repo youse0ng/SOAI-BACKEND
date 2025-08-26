@@ -1,5 +1,7 @@
 package com.team1.soai.controller;
 import com.team1.soai.dto.PatientDataResponse;
+import com.team1.soai.service.CaptioningService;
+import com.team1.soai.service.SegmentationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import com.team1.soai.service.PatientService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
 import java.util.List;
 import java.util.Map;
 import java.util.ArrayList;
@@ -17,6 +20,8 @@ public class PatientsController {
     @Autowired
     private PatientService patientService;
 
+    @Autowired
+    private SegmentationService segmentationService;
     // 검색 폼 페이지
     @GetMapping("/dashboard")
     public String patientForm() {
@@ -73,7 +78,7 @@ public class PatientsController {
                              @RequestParam("seriesId") String seriesId,
                              @RequestParam("instanceId") String instanceId,
                              Model model) {
-        String segmentationImage = patientService.getSegmentationImage(studyId);
+        String segmentationImage = segmentationService.getSegmentationImage(studyId);
 
         model.addAttribute("patientId", patientId);
         model.addAttribute("studyId", studyId);
@@ -84,4 +89,24 @@ public class PatientsController {
 
         return "segmentation";
     }
+    @Autowired
+    private CaptioningService captioningService;
+
+    @PostMapping("/captioning")
+    public String runCaptioning(@RequestParam("studyId") String studyId,
+                                @RequestParam("patientId") String patientId,
+                                @RequestParam("seriesId") String seriesId,
+                                @RequestParam("instanceId") String instanceId, Model model){
+        String transcript = captioningService.getCaptioning(studyId);
+        String segmentationImage = segmentationService.getSegmentationImage(studyId);
+        model.addAttribute("patientId", patientId);
+        model.addAttribute("studyId", studyId);
+        model.addAttribute("seriesId", seriesId);
+        model.addAttribute("instanceId", instanceId);
+        model.addAttribute("segmentationImage", segmentationImage);
+        model.addAttribute("instancePreviewUrl", patientService.getInstancePreviewUrl(instanceId));
+        model.addAttribute("transcript", transcript);
+        return "captioning";
+    }
+
 }

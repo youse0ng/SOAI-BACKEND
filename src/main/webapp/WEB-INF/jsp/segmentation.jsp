@@ -10,6 +10,20 @@
     .image-container { display: flex; gap: 20px; margin-top: 20px; }
     .image-box { text-align: center; }
     .image-box img { border: 1px solid #ccc; }
+    .btn-container { margin-top: 30px; }
+    .btn-container form { display: inline; }
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        background-color: #007bff;
+        color: #fff;
+    }
+    .btn:hover {
+        background-color: #0056b3;
+    }
 </style>
 </head>
 <body>
@@ -38,6 +52,17 @@
 <c:if test="${not empty segmentationError}">
     <p style="color:red;">${segmentationError}</p>
 </c:if>
+
+<!-- Captioning 페이지로 이동 버튼 -->
+<div class="btn-container">
+    <form action="${pageContext.request.contextPath}/captioning" method="post">
+        <input type="hidden" name="patientId" value="${patientId}" />
+        <input type="hidden" name="studyId" value="${studyId}" />
+        <input type="hidden" name="seriesId" value="${seriesId}" />
+        <input type="hidden" name="instanceId" value="${instanceId}" />
+        <button type="submit" class="btn">📄 Captioning 실행</button>
+    </form>
+</div>
 
 </body>
 </html>

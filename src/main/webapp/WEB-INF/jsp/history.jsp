@@ -5,94 +5,124 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Chat History</title>
+    <title>의사 상담 기록</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #edf2f7;
             margin: 0;
             padding: 20px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
         }
+
         .history-container {
             width: 100%;
-            max-width: 800px;
-            background-color: #fff;
+            max-width: 900px;
+            background-color: #ffffff;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
             overflow: hidden;
             display: flex;
             flex-direction: column;
             height: 80vh;
         }
+
         .history-header {
-            background-color: #4a90e2;
-            color: white;
-            padding: 10px;
+            background-color: #0056b3;
+            color: #ffffff;
+            padding: 15px 20px;
             text-align: center;
-            font-size: 1.2em;
+            font-size: 1.5em;
+            font-weight: bold;
+            border-bottom: 2px solid #004080;
         }
+
         .history-body {
             flex: 1;
             padding: 20px;
             overflow-y: auto;
-            background-color: #fafafa;
+            background-color: #f7f9fc;
         }
+
         .history-entry {
             margin-bottom: 20px;
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 4px solid #0056b3;
         }
+
         .user-message {
             font-weight: bold;
-            color: #4a90e2;
+            color: #007bff;
+            margin-bottom: 5px;
         }
+
         .bot-message {
-            color: #333;
+            color: #212529;
+            margin-bottom: 8px;
         }
+
         .timestamp {
-            font-size: 0.9em;
-            color: #777;
+            font-size: 0.85em;
+            color: #6c757d;
+            text-align: right;
         }
+
+        .no-history {
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+            margin-top: 50px;
+        }
+
         .back-link {
             text-align: center;
-            padding: 10px;
+            padding: 15px;
+            background-color: #f1f3f6;
+            border-top: 1px solid #dee2e6;
         }
+
         .back-link a {
-            color: #4a90e2;
+            color: #0056b3;
             text-decoration: none;
-            font-size: 1em;
+            font-weight: bold;
+            padding: 8px 16px;
+            border: 1px solid #0056b3;
+            border-radius: 6px;
+            transition: all 0.2s;
         }
+
         .back-link a:hover {
-            text-decoration: underline;
+            background-color: #0056b3;
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
     <div class="history-container">
         <div class="history-header">
-            <h1>Chat History</h1>
+            의사 상담 기록
         </div>
         <div class="history-body">
             <c:forEach var="history" items="${historyList}">
                 <div class="history-entry">
-                    <div class="user-message">User: ${history.userMessage}</div>
-                    <div class="bot-message">Bot: ${history.botResponse}</div>
+                    <div class="user-message">의사: ${history.userMessage}</div>
+                    <div class="bot-message">AI: ${history.botResponse}</div>
                     <div class="timestamp">
-                        <!-- 수정: 타임존과 포맷 명확히 지정 -->
                         <fmt:formatDate value="${history.createdAt}" pattern="yyyy-MM-dd HH:mm:ss" timeZone="Asia/Seoul"/>
                     </div>
                 </div>
             </c:forEach>
+
             <c:if test="${empty historyList}">
-                <div>No chat history available.</div>
+                <div class="no-history">현재 상담 기록이 없습니다.</div>
             </c:if>
         </div>
         <div class="back-link">
-            <a href="/">Back to Chat</a>
+            <a href="/">대화 화면으로 돌아가기</a>
         </div>
     </div>
 </body>
