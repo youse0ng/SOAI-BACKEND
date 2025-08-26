@@ -36,12 +36,11 @@ Spring Boot 기반 **의료 소아 복부 X-Ray 분석 및 챗봇 시스템**입
 ---
 
 ## ⚙️ Tech Stack
-- **Backend** : Spring Boot, Java 17  
-- **Frontend** : JSP, HTML, CSS, JavaScript  
-- **Database** : MySQL  
+- **Backend** : Spring Boot, JDK 17, FastAPI  
+- **Frontend** : JSP, CSS
+- **Database** : MariaDB
 - **PACS** : Orthanc  
-- **AI Model** : ONNX (Segmentation)  
-
+- **AI Model** : Pytorch, HuggingFace
 ---
 
 ## 📌 프로젝트 구조
